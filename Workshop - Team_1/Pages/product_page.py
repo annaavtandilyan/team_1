@@ -9,7 +9,7 @@ import test_data
 class ProductPage(BasicHelper):
     search_input_loc = (By.XPATH, "//input[@placeholder='Search 6pm.com']")
     btn_search_loc = (By.XPATH, "//button[@type='submit']")
-    search_result_loc = (By.XPATH, "//a[@class='fo-z']")
+    search_result_loc = (By.XPATH, "//a[@class='Bn-z']")
     brand_filter_loc = (By.XPATH, "//aside[@id='searchFilters']/div[1]/div[2]/section[3]/div[2]/ul[1]/li[3]/a[1]")
     scroll_loc = (By.XPATH, '//button[@data-selected-facet-group-name="colorFacet"]')
     price_filter_loc = (By.XPATH, "//aside[@id='searchFilters']/div[1]/div[2]/section[4]/div[1]/ul[1]/li[1]/a[1]")

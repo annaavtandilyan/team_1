@@ -8,6 +8,7 @@ def driver():
     driver = webdriver.Chrome()
     yield driver
     driver.quit()
+    logging.info("Driver closed")
 
 
 def pytest_configure():

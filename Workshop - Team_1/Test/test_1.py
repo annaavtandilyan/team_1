@@ -15,5 +15,9 @@ def test_search_product(driver):
     logging.info(f"Geting search result {results}")
     logging.info("Checking search result suit to searched data")
     assert ({test_data.brand_name} in result for result in results), "No Lacoste sunglasses found"
-    assert ({test_data.price_range} in result and float(result) for result in results), "Price filter not applied correctly"
+    logging.info(f"Brand: {test_data.brand_name} is in searched data: {results}")
+    assert ({test_data.price_range} in result and float(
+        result.split("$")[1]) <= 200.00 for result in results), "Price filter not applied correctly"
+    logging.info(f"Price: {test_data.price_range} is in searched data: {results}")
     logging.info("Result information suit to searched data")
+    logging.info("Test passed")
