@@ -1,3 +1,3 @@
 search_data = "classic sunglasses"
-brand_name = "Lacoste"
-price_range = "$200.00 and Under"
+brand_name = "Revo"
+price = "200.00"
