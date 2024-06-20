@@ -14,9 +14,11 @@ def test_search_product(driver):
     results = product_page.get_results()
     logging.info(f"Geting search result {results}")
     logging.info("Checking search result suit to searched data")
-    assert all(test_data.brand_name in result for result in results), "No Lacoste sunglasses found"
+    assert all(test_data.brand_name in result for result in results)
+    "No Lacoste sunglasses found"
     logging.info(f"Brand: {test_data.brand_name} is in searched data: {results}")
-    assert all(float(result.split("$")[1].split(" ")[0].strip('.')) <= 200.00 for result in results)
+    assert all(float(result.split("$")[1].split(" ")[0].strip('.')) <= float(
+        test_data.price) for result in results)
     logging.info(f"Price: {test_data.price} is in searched data: {results}")
     logging.info("Result information suit to searched data")
     logging.info("Test passed")

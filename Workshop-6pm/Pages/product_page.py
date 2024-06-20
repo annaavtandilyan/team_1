@@ -9,10 +9,11 @@ import test_data
 class ProductPage(BasicHelper):
     search_input_loc = (By.XPATH, "//input[@placeholder='Search 6pm.com']")
     btn_search_loc = (By.XPATH, "//button[@type='submit']")
-    search_result_loc = (By.XPATH, "//a[@class='Bn-z']")
+    search_result_loc = (By.XPATH, "//a[@class='Tm-z']")
     brand_filter_loc = (By.XPATH, f"//ul[@aria-labelledby='brandNameFacet']//span[text()='{test_data.brand_name}']")
-    scroll_loc = (By.XPATH, '//button[@data-selected-facet-group-name="colorFacet"]')
-    brand_price_filter = (By.XPATH, f"//a[@class='uA-z']//span[text()='${test_data.price} and Under']")
+    scroll_loc = (By.XPATH, '//button[normalize-space()="Color"]')
+    # brand_price_filter = (By.XPATH, f"//a[@class='uA-z']//span[text()='${test_data.price} and Under']")
+    brand_price_filter = (By.XPATH, f"//a[@class='wA-z']//span[contains(text(),'${test_data.price} and Under')]")
    
     def search_product(self, product_name):
         self.find_and_send_keys(self.search_input_loc, product_name)
