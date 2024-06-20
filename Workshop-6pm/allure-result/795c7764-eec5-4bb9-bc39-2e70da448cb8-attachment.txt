@@ -1,0 +1,5 @@
+[32mINFO    [0m root:basic_page.py:13 Open url https://www.6pm.com/
+[32mINFO    [0m root:product_page.py:21 Searching for product: classic sunglasses
+[32mINFO    [0m root:product_page.py:25 Selected brand: Dakine
+[32mINFO    [0m root:product_page.py:29 Scrolled to find 'Price' checkbox
+[32mINFO    [0m root:conftest.py:11 Driver closed
